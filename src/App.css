@@ -1,8 +1,22 @@
 #app{
   font-family: Helvetica;
   overflow-x: hidden;
+  cursor: none;
 
 }
+
+.circle-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #ffbd59;
+  border-radius: 50%;
+  position: fixed; /* Fixed to the viewport */
+  pointer-events: none; /* Prevent interaction issues */
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999; /* Ensure it stays above other elements */
+}
+
 @media (max-width: 1400px) {
   .hidethem {
     visibility: hidden;
